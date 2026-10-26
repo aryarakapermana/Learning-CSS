@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hubungi sekretariat dan helpdesk Campus Life - Layanan informasi kegiatan dan kemahasiswaan.">
+  <title>Kontak Kami - Campus Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- Header Website -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <img src="images/LOGO_IT_PLN_Kotak.png" alt="Logo Institut Teknologi PLN" class="brand-logo" width="56" height="56">
+        <div class="header-title-group">
+          <h1>Campus Life</h1>
+          <p>Portal informasi kegiatan mahasiswa</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigasi Utama -->
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="detail.html" class="nav-link">Kegiatan</a></li>
+        <li><a href="registration.html" class="nav-link">Pendaftaran</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Konten Utama: Kontak & Form Pesan -->
+  <main id="main-content" class="container">
+    <div style="margin-top: 2rem; margin-bottom: 1.5rem;">
+      <h2>Hubungi Pengelola Campus Life</h2>
+      <p style="color: var(--color-text-muted);">
+        Punya ide kolaborasi kegiatan, pertanyaan pendaftaran, atau kendala teknis? Tim pengelola kemahasiswaan siap membantu Anda.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Kolom Informasi Kontak -->
+      <aside class="contact-info-card">
+        <h3>Saluran Informasi Resmi</h3>
+        <p style="font-size: 0.95rem; color: #4b5563;">
+          Kunjungi sekretariat kami di kampus atau hubungi melalui salah satu saluran daring di bawah ini.
+        </p>
+
+        <ul class="contact-channels">
+          <li class="channel-item">
+            <div class="channel-icon" aria-hidden="true">🏢</div>
+            <div class="channel-details">
+              <h4>Sekretariat Pusat</h4>
+              <p>Gedung Student Center Lt. 2, Ruang 204<br>Jl. Kampus Merdeka No. 1, Kota Pendidikan</p>
+            </div>
+          </li>
+
+          <li class="channel-item">
+            <div class="channel-icon" aria-hidden="true">✉️</div>
+            <div class="channel-details">
+              <h4>Surel Resmi</h4>
+              <p>
+                Umum: <a href="mailto:info@campuslife.ac.id">info@campuslife.ac.id</a><br>
+                Bantuan: <a href="mailto:helpdesk@campuslife.ac.id">helpdesk@campuslife.ac.id</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="channel-item">
+            <div class="channel-icon" aria-hidden="true">📱</div>
+            <div class="channel-details">
+              <h4>WhatsApp Hotline</h4>
+              <p>+62 812-3456-7890<br>(Senin &ndash; Jumat, 08.00 &ndash; 16.00 WIB)</p>
+            </div>
+          </li>
+
+          <li class="channel-item">
+            <div class="channel-icon" aria-hidden="true">🕒</div>
+            <div class="channel-details">
+              <h4>Jam Layanan</h4>
+              <p>Senin &ndash; Jumat: 08.00 &ndash; 16.30 WIB<br>Sabtu &amp; Minggu: Libur / Kegiatan Khusus</p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Kolom Formulir Pesan -->
+      <section class="contact-info-card">
+        <h3>Kirim Pesan atau Pertanyaan</h3>
+        <p style="font-size: 0.95rem; color: #4b5563; margin-bottom: 1.5rem;">
+          Tuliskan pertanyaan Anda, dan narahubung kami akan membalas ke email Anda dalam waktu 1&times;24 jam kerja.
+        </p>
+
+        <div id="contact-notification" class="alert alert-info" style="display: none;" role="status"></div>
+
+        <form id="contact-form" method="post" action="#">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Nama Pengirim <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="contact-name" name="name" class="form-control" placeholder="Nama lengkap Anda" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email Aktif <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="contact-email" name="email" class="form-control" placeholder="alamat@email.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-category" class="form-label">Topik Pertanyaan <span class="required" aria-hidden="true">*</span></label>
+            <select id="contact-category" name="category" class="form-control" required>
+              <option value="" disabled selected>Pilih salah satu topik</option>
+              <option value="pendaftaran">Pertanyaan Seputar Pendaftaran</option>
+              <option value="sertifikat">Klaim E-Sertifikat Kegiatan</option>
+              <option value="kolaborasi">Usulan Kerja Sama / Publikasi Event Ormawa</option>
+              <option value="lainnya">Lain-lain</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Isi Pesan <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Jelaskan pertanyaan atau kendala Anda secara rinci..." required></textarea>
+          </div>
+
+          <div class="form-actions" style="margin-top: 1.5rem; padding-top: 1rem;">
+            <button type="submit" class="button">Kirim Pesan</button>
+            <button type="reset" class="button button-secondary">Bersihkan</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Website -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Campus Life</h3>
+          <p>Wadah kolaborasi dan informasi pusat aktivitas mahasiswa untuk memperkaya pengalaman akademik dan non-akademik.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detail.html">Kegiatan</a></li>
+            <li><a href="registration.html">Pendaftaran</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Sekretariat</h4>
+          <ul class="footer-links">
+            <li>Gedung Student Center Lt. 2</li>
+            <li>Jl. Kampus Merdeka No. 1</li>
+            <li>Email: info@campuslife.ac.id</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campus Life</p>
+        <p>Praktik Desain Web &mdash; Pertemuan 7</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const notif = document.getElementById('contact-notification');
+      const name = document.getElementById('contact-name').value;
+      notif.className = 'alert alert-success';
+      notif.style.display = 'block';
+      notif.innerHTML = '✅ <strong>Pesan Terkirim!</strong> Terima kasih ' + name + ', pesan Anda telah diterima di form simulasi ini.';
+      notif.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>

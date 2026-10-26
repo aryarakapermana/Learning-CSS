@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bgAI)" rx="16"/>
+  <!-- Neural Network Nodes & Links -->
+  <g stroke="#818cf8" stroke-width="1.5" opacity="0.4">
+    <line x1="120" y1="180" x2="220" y2="100"/>
+    <line x1="120" y1="180" x2="220" y2="180"/>
+    <line x1="120" y1="180" x2="220" y2="260"/>
+    <line x1="220" y1="100" x2="380" y2="120"/>
+    <line x1="220" y1="180" x2="380" y2="180"/>
+    <line x1="220" y1="260" x2="380" y2="240"/>
+    <line x1="380" y1="120" x2="480" y2="180"/>
+    <line x1="380" y1="180" x2="480" y2="180"/>
+    <line x1="380" y1="240" x2="480" y2="180"/>
+  </g>
+
+  <!-- Glowing Brain / AI Core in Center -->
+  <circle cx="300" cy="180" r="75" fill="url(#orbGrad)" opacity="0.85"/>
+  <circle cx="300" cy="180" r="88" stroke="#c084fc" stroke-width="2" fill="none" stroke-dasharray="6 6"/>
+  
+  <!-- Robot/Chip Icon -->
+  <rect x="270" y="150" width="60" height="60" rx="14" fill="#ffffff"/>
+  <circle cx="288" cy="172" r="5" fill="#4338ca"/>
+  <circle cx="312" cy="172" r="5" fill="#4338ca"/>
+  <path d="M285 195 Q300 203 315 195" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <line x1="300" y1="150" x2="300" y2="138" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="300" cy="134" r="5" fill="#facc15"/>
+
+  <!-- Network Nodes -->
+  <circle cx="120" cy="180" r="10" fill="#38bdf8"/>
+  <circle cx="220" cy="100" r="8" fill="#a78bfa"/>
+  <circle cx="220" cy="180" r="8" fill="#a78bfa"/>
+  <circle cx="220" cy="260" r="8" fill="#a78bfa"/>
+  <circle cx="380" cy="120" r="8" fill="#c084fc"/>
+  <circle cx="380" cy="180" r="8" fill="#c084fc"/>
+  <circle cx="380" cy="240" r="8" fill="#c084fc"/>
+  <circle cx="480" cy="180" r="10" fill="#34d399"/>
+
+  <text x="300" y="300" fill="#e0e7ff" font-family="sans-serif" font-weight="bold" font-size="20" text-anchor="middle">Artificial Intelligence &amp; Career</text>
+  <text x="300" y="325" fill="#a5b4fc" font-family="sans-serif" font-size="13" text-anchor="middle">Kesiapan Mahasiswa di Era Generative AI</text>
+</svg>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pendaftaran kegiatan mahasiswa di portal Campus Life - Isi formulir registrasi online.">
+  <title>Pendaftaran Kegiatan Mahasiswa - Campus Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- Header Website -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <img src="images/LOGO_IT_PLN_Kotak.png" alt="Logo Institut Teknologi PLN" class="brand-logo" width="56" height="56">
+        <div class="header-title-group">
+          <h1>Campus Life</h1>
+          <p>Portal informasi kegiatan mahasiswa</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigasi Utama -->
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="detail.html" class="nav-link">Kegiatan</a></li>
+        <li><a href="registration.html" class="nav-link active" aria-current="page">Pendaftaran</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Konten Utama: Form Registrasi -->
+  <main id="main-content" class="container">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Formulir Pendaftaran Kegiatan</h2>
+        <p>Lengkapi formulir di bawah ini dengan data yang valid untuk mendaftar pada kegiatan mahasiswa.</p>
+      </div>
+
+      <!-- Area Notifikasi Alert (Dikelola sisi klien) -->
+      <div id="form-notification" class="alert alert-info" role="status">
+        <span>ℹ️ Pastikan seluruh kolom bertanda bintang (<span style="color:#dc2626;">*</span>) telah terisi dengan benar sebelum mengirim.</span>
+      </div>
+
+      <form id="registration-form" method="post" action="#">
+        <!-- Nama Lengkap -->
+        <div class="form-group">
+          <label for="fullname" class="form-label">Nama Lengkap <span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Contoh: Arga Rahadian" required autocomplete="name">
+          <span class="form-helper">Isi sesuai dengan nama lengkap pada Kartu Tanda Mahasiswa (KTM).</span>
+        </div>
+
+        <!-- NIM & Program Studi (Grid Baris) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-lg);">
+          <div>
+            <label for="student-id" class="form-label">Nomor Induk Mahasiswa (NIM) <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="student-id" name="student_id" class="form-control" placeholder="Contoh: 23115001" required pattern="[0-9]{6,12}">
+            <span class="form-helper">6-12 digit angka.</span>
+          </div>
+          <div>
+            <label for="department" class="form-label">Program Studi / Jurusan <span class="required" aria-hidden="true">*</span></label>
+            <select id="department" name="department" class="form-control" required>
+              <option value="" disabled selected>Pilih Program Studi</option>
+              <option value="ti">Teknik Informatika</option>
+              <option value="si">Sistem Informasi</option>
+              <option value="ilkom">Ilmu Komputer</option>
+              <option value="dkv">Desain Komunikasi Visual</option>
+              <option value="manajemen">Manajemen &amp; Bisnis</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Email & Nomor Telepon -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-lg);">
+          <div>
+            <label for="email" class="form-label">Alamat Email Mahasiswa <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="nama@student.kampus.ac.id" required autocomplete="email">
+            <span class="form-helper">E-tiket dan konfirmasi akan dikirimkan ke email ini.</span>
+          </div>
+          <div>
+            <label for="phone" class="form-label">Nomor WhatsApp / HP <span class="required" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="08xxxxxxxxxx" required autocomplete="tel">
+            <span class="form-helper">Untuk koordinasi grup kegiatan.</span>
+          </div>
+        </div>
+
+        <!-- Pilihan Kegiatan -->
+        <div class="form-group">
+          <label for="event-choice" class="form-label">Pilih Kegiatan yang Diikuti <span class="required" aria-hidden="true">*</span></label>
+          <select id="event-choice" name="event_choice" class="form-control" required>
+            <option value="" disabled selected>Pilih salah satu kegiatan</option>
+            <option value="workshop-web" selected>Workshop Web Design: HTML &amp; CSS (14 Nov 2026)</option>
+            <option value="seminar-ai">Seminar Artificial Intelligence (25 Nov 2026)</option>
+            <option value="festival-art">Festival Budaya &amp; Kreativitas Kampus (5-6 Des 2026)</option>
+          </select>
+        </div>
+
+        <!-- Tingkat Kemampuan / Pengalaman -->
+        <div class="form-group">
+          <fieldset style="border: none; padding: 0;">
+            <legend class="form-label">Tingkat Pengalaman Bidang Terkait</legend>
+            <div class="form-check-group">
+              <label class="form-check">
+                <input type="radio" name="skill_level" value="beginner" checked>
+                <span class="form-check-label">Pemula (Belum pernah atau baru mulai belajar)</span>
+              </label>
+              <label class="form-check">
+                <input type="radio" name="skill_level" value="intermediate">
+                <span class="form-check-label">Menengah (Sudah memahami konsep dasar)</span>
+              </label>
+              <label class="form-check">
+                <input type="radio" name="skill_level" value="advanced">
+                <span class="form-check-label">Mahir (Sudah terbiasa mengerjakan proyek mandiri)</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Motivasi / Catatan Khusus -->
+        <div class="form-group">
+          <label for="motivation" class="form-label">Motivasi atau Harapan Mengikuti Kegiatan</label>
+          <textarea id="motivation" name="motivation" class="form-control" rows="3" placeholder="Tuliskan apa yang ingin Anda pelajari atau capai dari kegiatan ini..."></textarea>
+        </div>
+
+        <!-- Persetujuan Syarat & Ketentuan -->
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span class="form-check-label">
+              Saya menyatakan bahwa data yang diisikan adalah benar dan bersedia mematuhi tata tertib kegiatan mahasiswa. <span class="required" aria-hidden="true">*</span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="form-actions">
+          <button type="submit" class="button">Kirim Pendaftaran</button>
+          <button type="reset" class="button button-secondary">Reset Formulir</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Website -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Campus Life</h3>
+          <p>Wadah kolaborasi dan informasi pusat aktivitas mahasiswa untuk memperkaya pengalaman akademik dan non-akademik.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detail.html">Kegiatan</a></li>
+            <li><a href="registration.html">Pendaftaran</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Sekretariat</h4>
+          <ul class="footer-links">
+            <li>Gedung Student Center Lt. 2</li>
+            <li>Jl. Kampus Merdeka No. 1</li>
+            <li>Email: info@campuslife.ac.id</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campus Life</p>
+        <p>Praktik Desain Web &mdash; Pertemuan 7</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script sederhana interaksi form sisi klien (tanpa backend) -->
+  <script>
+    document.getElementById('registration-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const notif = document.getElementById('form-notification');
+      const name = document.getElementById('fullname').value;
+      const eventEl = document.getElementById('event-choice');
+      const eventName = eventEl.options[eventEl.selectedIndex].text;
+
+      notif.className = 'alert alert-success';
+      notif.innerHTML = '✅ <strong>Pendaftaran Berhasil!</strong> Terima kasih ' + name + ', formulir untuk kegiatan "' + eventName + '" telah diterima di browser (simulasi sisi klien).';
+      notif.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>
